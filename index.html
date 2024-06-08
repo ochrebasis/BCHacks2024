@@ -4,18 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Pages with Node.js Backend</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <h1>Data from Backend</h1>
     
     <p id="message">Loading...</p>
+    <p id="vercelCheck">Running on: Loading...</p>
+    <p id="deploymentURL">Deployment URL: Loading...</p>
 
     <script>
         fetch('https://bc-hacks2024.vercel.app/api/data')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('message').innerText = data.message;
+                document.getElementById('deploymentURL').innerText = data.envURL
+                vercelCheck = data.envProcess;
             });
+        if(vercelCheck == 1) {
+            var currentText = vercelCheck.innerText;
+            document.getElementById('vercelCheck').innerText = currentText.replace("Loading...","Vercel is running!");
+        }
     </script>
 </body>
 </html>
