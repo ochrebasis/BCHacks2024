@@ -9,9 +9,7 @@ app.get('/api/data', (req, res) => {
     res.json({ 
         message: 'Hello from Node.js!',
         envProcess: process.env.VERCEL,
-        envURL: process.env.VERCEL_URL,
-        envNode: process.env.NODE_ENV,
-        envVercel: process.env.VERCEL_ENV
+        envURL: process.env.VERCEL_URL
     });
 });
 

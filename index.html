@@ -30,21 +30,21 @@
 <body>
     <h1>Data from Backend</h1>
     <p id="message">Loading...</p>
-    Running on: <p id="vercelCheck">Loading...</p>
-    Deployment URL: <p id="deploymentURL">Loading...</p>
-    Node Environment: <p id="nodeENV">Loading...</p>
-    Vercel Environment: <p id="vercelENV">Loading...</p>
+    <p id="vercelCheck">Running on: Loading...</p>
+    <p id="deploymentURL">Deployment URL: Loading...</p>
 
     <script>
         fetch('https://bc-hacks2024.vercel.app/api/data')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('message').innerText = data.message;
-                document.getElementById('vercelCheck').innerText = data.envProcess
                 document.getElementById('deploymentURL').innerText = data.envURL
-                document.getElementById('nodeENV').innerText = data.envNode
-                document.getElementById('vercelENV').innerText = data.envVercel
+                vercelCheck = data.envProcess;
             });
+        if(vercelCheck == 1) {
+            var currentText = vercelCheck.innerText;
+            document.getElementById('vercelCheck').innerText = currentText.replace("Loading...","Vercel is running!");
+        }
     </script>
 </body>
 </html>
