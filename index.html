@@ -28,11 +28,18 @@
     </style>
 </head>
 <body>
-    <h1>Data from Backend</h1>
+    <!-- <h1>Data from Backend</h1>
     
     <p id="message">Loading...</p>
     <p id="vercelCheck">Running on: Loading...</p>
-    <p id="deploymentURL">Deployment URL: Loading...</p>
+    <p id="deploymentURL">Deployment URL: Loading...</p> -->
+
+    <h1>Carbon Mapping Data</h1>
+    <h2>A site for finding the largest sources of carbon emissions in your area. </h2>
+
+    <h3>Washington State</h3>
+    
+
 
     <script>
         fetch('https://bc-hacks2024.vercel.app/api/data')
@@ -47,5 +54,6 @@
             document.getElementById('vercelCheck').innerText = currentText.replace("Loading...","Vercel is running!");
         }
     </script>
+    <script src="testingapi.js"></script>
 </body>
 </html>
