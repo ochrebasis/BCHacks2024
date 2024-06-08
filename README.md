@@ -1,6 +1,6 @@
 # BC HACKS 2024
 
-Team Members: ****, ****, ****, ****
+Team Members: Liam, Miriam, Jeff, Ri
 
 Project Title: *********
 
