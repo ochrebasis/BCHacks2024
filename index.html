@@ -10,7 +10,7 @@
     <p id="message">Loading...</p>
 
     <script>
-        fetch('https://<your-backend-url>/api/data')
+        fetch('https://bc-hacks2024.vercel.app/api/data')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('message').innerText = data.message;
