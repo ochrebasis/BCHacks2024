@@ -1,0 +1,15 @@
+* {
+    background-color: #3A503A;
+    color: #BAFCCE;
+}
+
+h1 {
+    font-family: "Shadows Into Light", cursive;
+    margin: auto;
+    text-align: center;
+}
+
+.map {
+    max-width: 10%;
+    margin: auto;
+}
