@@ -1,0 +1,17 @@
+* {
+    background-color: #3A503A;
+    color: #BAFCCE;
+    font-family: "Merriweather", serif;
+
+}
+
+h1 {
+    font-family: "Shadows Into Light", cursive;
+    margin: auto;
+    text-align: center;
+}
+
+ul {
+    font-size: 12px;
+    list-style-type: none;
+}
